@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>tau</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "CreativeWork",
+            "url": "https://onnoeberhard.com/tau",
+            "name": "tau",
+            "description": "An internet-controlled chain of lights",
+            "author": {
+                "@type": "Person",
+                "sameAs": "https://onnoeberhard.com"
+            }
+        }
+    </script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="An internet-controlled chain of lights"/>
+    <script src="/assets/js/ie/html5shiv.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="tau/css/tau_ie8.css"/>
+    <link rel="stylesheet" href="tau/css/tau.css"/>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
+</head>
+<body class="landing">
+<div id="page-wrapper">
+
+    <header id="header" class="alt">
+        <h1><a href="/tau">tau</a> by <a href="/" id="uplink">Onno Eberhard</a></h1>
+    </header>
+
+    <section class="banner" id="tau-banner">
+        <h2 style="font-family: 'Cutive Mono', monospace;">tau</h2>
+        <p style="font-family: 'Courier New', monospace; font-weight: lighter;">because <span
+                style="font-size:1.5rem;font-family: 'GFS Didot', serif;">&tau;</span> &gt; <span
+                style="font-size:1.5rem;font-family: 'GFS Didot', serif;">&pi;</span></p><br/>
+        <ul class="actions">
+            <li><a href="#main" class="button">What's this?</a></li>
+            <li><a href="#controls" class="button special">Start!</a></li>
+        </ul>
+    </section>
+
+    <section id="main" class="container">
+
+        <section class="box special">
+            <header class="major">
+                <h2>Tau?</h2>
+                <p>So I wanted to build a chain of lights for my room and the logical question was of course
+                    "What is the nerdiest way to do this?". And I think I found it:
+                    On this chain of lights, every bulb (there are 10) is individually controlled via a Raspberry Pi
+                    and a relay - circuit board I built.</p>
+            </header>
+            <br/><br/>
+            <div><span id="tauboard" class="image left"><img src="tau/img/tau1.jpg" alt="" style="width: 100%"/><br/>The "Tau-Board"<br/><br/></span>
+                <a class="button" href="tau/img/eplan.png" target="_blank">Schematic Project</a><br/><br/>
+                <a class="button" href="tau/img/Schematic.png" target="_blank">Schematic Tau-Board
+                    (old)</a>
+                <br/><br/>
+                <p>As you can see, this is a professionally executed project ;-)<br/>Anyway, because the lights are
+                    controlled by a Raspberry Pi, they can be accessed through the magic of the internet (hence this
+                    website).
+                    So if you want to control the lights in my room, click there:<br/><br/>
+                    <a class="button special" href="#controls">Here</a><br/><br/>
+                    If you're still confused why it's called "tau", click
+                    <a href="https://youtu.be/jG7vhMMXagQ" target="_blank">here</a> or
+                    <a href="https://tauday.com/" target="_blank">here</a>.<br/>
+                    <span style="font-size: 0.8rem">Remember, it's called a Raspberry <b>Pi</b> (Yes, it's a <i>very</i> bad pun).</span>
+                </p>
+            </div>
+            <div><span class="image fit"><img src="tau/img/kette1.jpg" alt=""/><br/>
+                The lights in action</span></div>
+            <br/>
+            <ul class="actions">
+                <li><a href="https://github.com/onnoeberhard/tau" class="button special" target="_blank">Browse GitHub Repository</a></li>
+                <li><a href="http://imgur.com/a/TLJ16" class="button special" target="_blank">How I built it</a></li>
+            </ul>
+        </section>
+
+        <section id="controls" class="box special features">
+            <h2 id="loading"><br/>Loading...</h2>
+            <h2 id="noconn">No Connection</h2>
+            <h2 class="withconn">Light Controls</h2>
+            <h4 class="withconn">Click the lights to turn them on and off.</h4><br/>
+            <ul class="actions no-collapse 50% uniform withconn">
+                <li><a onclick="toggle(0);" style="border: none; cursor: pointer">
+                    <img id="light-1" src="tau/img/bulb-red.png" width="64em"></a></li>
+                <li><a onclick="toggle(1);" style="border: none; cursor: pointer">
+                    <img id="light-2" src="tau/img/bulb-orange.png" width="64em"></a></li>
+                <li><a onclick="toggle(2);" style="border: none; cursor: pointer">
+                    <img id="light-3" src="tau/img/bulb-yellow.png" width="64em"></a></li>
+                <li><a onclick="toggle(3);" style="border: none; cursor: pointer">
+                    <img id="light-4" src="/tau//bulb-green.png" width="64em"></a></li>
+                <li><a onclick="toggle(4);" style="border: none; cursor: pointer">
+                    <img id="light-5" src="/tau//bulb-blue.png" width="64em"></a></li>
+                <li><a onclick="toggle(5);" style="border: none; cursor: pointer">
+                    <img id="light-6" src="/tau//bulb-red.png" width="64em"></a></li>
+                <li><a onclick="toggle(6);" style="border: none; cursor: pointer">
+                    <img id="light-7" src="/tau//bulb-orange.png" width="64em"></a></li>
+                <li><a onclick="toggle(7);" style="border: none; cursor: pointer">
+                    <img id="light-8" src="/tau//bulb-yellow.png" width="64em"></a></li>
+                <li><a onclick="toggle(8);" style="border: none; cursor: pointer">
+                    <img id="light-9" src="/tau//bulb-green.png" width="64em"></a></li>
+                <li><a onclick="toggle(9);" style="border: none; cursor: pointer">
+                    <img id="light-10" src="/tau//bulb-blue.png" width="64em"></a></li>
+            </ul>
+            <ul class="actions" id="reload">
+                <li><a class="button special" onclick="getLights(true)">Reload Status</a></li>
+            </ul>
+        </section>
+
+        <section class="box special features withconn" style="padding:0">
+            <div id="map" style="width:100%; height: 512px; border-radius: 6px"></div>
+        </section>
+
+        <section class="box special features withconn">
+            <h2>Stats</h2>
+            <div class="row uniform 50%" style="min-height: 450px;">
+                <div class="chartw">
+                    <div id="colorchart" style="width:100%;height: 400px;"></div>
+                    <span style="position: relative;top:-30px">Color Allocation</span></div>
+                <div class="chartw">
+                    <h4>Top Cities:</h4>
+                    <div id="citychart" style="width: 100%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box special features withconn" style="padding: 0">
+            <pre id="log" style="text-align: left; color: #ffffff; background: #000000"></pre>
+        </section>
+
+        <section class="box special features">
+            <h2>Tau Day 2017</h2>
+            <p>This was about ten hours of live stream</p>
+            <iframe id="ytplayer" allowfullscreen="allowfullscreen" width="100%"
+                    src="https://www.youtube.com/embed/ET0An_eKq9Y?origin=https://tau.onnoeberhard.com&showinfo=0&modestbranding=0&rel=0"
+                    frameborder="0"></iframe>
+        </section>
+
+    </section>
+
+    <footer id="footer">
+        <a rel="license" style="border: none" href="http://creativecommons.org/licenses/by/4.0/"><img alt="CC BY 4.0" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+        <br/><br/><br/>
+        <ul class="icons">
+            <li><a href="https://twitter.com/onnoeberhard" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a>
+            </li>
+            <li><a href="https://github.com/onnoeberhard" target="_blank" class="icon fa-github"><span class="label">Github</span></a>
+            </li>
+            <li><a href="mailto:onnoeberhard@gmail.com" class="icon fa-envelope"><span class="label">Mail</span></a>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; 2017 &middot; <a href="/">Onno Eberhard</a></li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+</div>
+<div id="snackbar"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/js/skel.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="/assets/js/ie/respond.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/tau/tau.js"></script>
+<script src="/assets/js/js.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyAp4xRdkthGPg5ChtFQlvEcXef5kfyJikA"></script>
+<script>
+    google.charts.load('current', {'packages': ['corechart', 'table']});
+    google.charts.setOnLoadCallback(charts);
+</script>
+</body>
+</html>
