@@ -66,24 +66,35 @@
                     If you're still confused why it's called "tau", click
                     <a href="https://youtu.be/jG7vhMMXagQ" target="_blank">here</a> or
                     <a href="https://tauday.com/" target="_blank">here</a>.<br/>
-                    <span style="font-size: 0.8rem">Remember, it's called a Raspberry <b>Pi</b> (Yes, it's a <i>very</i> bad pun).</span>
+                    <span style="font-size: 0.8rem">It's called a Raspberry <b>Pi</b> (Yes, it's a <i><u>very</u></i> bad pun).</span><br/>
                 </p>
             </div>
             <div><span class="image fit"><img src="tau/img/kette1.jpg" alt=""/><br/>
                 The lights in action</span></div>
             <br/>
             <ul class="actions">
-                <li><a href="https://github.com/onnoeberhard/tau" class="button special" target="_blank">Browse GitHub Repository</a></li>
+                <li><a href="https://github.com/onnoeberhard/tau" class="button special" target="_blank">Browse GitHub
+                    Repository</a></li>
                 <li><a href="http://imgur.com/a/TLJ16" class="button special" target="_blank">How I built it</a></li>
             </ul>
         </section>
 
         <section id="controls" class="box special features">
             <h2 id="loading"><br/>Loading...</h2>
-            <h2 id="noconn">No Connection</h2>
+            <h2 class="noconn loconn">No Connection</h2>
+            <a class="noconn button"
+               onclick="alertify.alert('There is no connection to the Raspberry Pi, because either I have turned ' +
+                'it off, or you are on an IPv4 connection, wich sadly is not supported anymore, ' +
+                 'because my stupid internet provider only grants me the luxury of DS-Lite.<br/>' +
+                  'If anybody knows how to fix this problem, please tell me 😬<br/>' +
+                   'Your connection (should be IPv6):<br/>' +
+                   '<a href=\'http://ipv6-test.com\' target=\'_blank\' style=\'border: none\'><img src=\'http://v4v6.ipv6-test.com/imgtest.png\' style=\'display: block; margin: auto; margin-top: 0.5em; margin-bottom: -0.5em\'/></a><br/>' +
+                    'If it says IPv6, I don\'t know, why you aren\'t connected :(')">
+                Why?
+            </a><br class="noconn"/>
             <h2 class="withconn">Light Controls</h2>
-            <h4 class="withconn">Click the lights to turn them on and off.</h4><br/>
-            <ul class="actions no-collapse 50% uniform withconn">
+            <h4 class="withconn" id="light_notice">Click the lights to turn them on and off.</h4><br/>
+            <ul class="actions no-collapse 50% uniform withconn loconn">
                 <li><a onclick="toggle(0);" style="border: none; cursor: pointer">
                     <img id="light-1" src="tau/img/bulb-red.png" width="64em"></a></li>
                 <li><a onclick="toggle(1);" style="border: none; cursor: pointer">
@@ -91,23 +102,26 @@
                 <li><a onclick="toggle(2);" style="border: none; cursor: pointer">
                     <img id="light-3" src="tau/img/bulb-yellow.png" width="64em"></a></li>
                 <li><a onclick="toggle(3);" style="border: none; cursor: pointer">
-                    <img id="light-4" src="/tau//bulb-green.png" width="64em"></a></li>
+                    <img id="light-4" src="/tau/img/bulb-green.png" width="64em"></a></li>
                 <li><a onclick="toggle(4);" style="border: none; cursor: pointer">
-                    <img id="light-5" src="/tau//bulb-blue.png" width="64em"></a></li>
+                    <img id="light-5" src="/tau/img/bulb-blue.png" width="64em"></a></li>
                 <li><a onclick="toggle(5);" style="border: none; cursor: pointer">
-                    <img id="light-6" src="/tau//bulb-red.png" width="64em"></a></li>
+                    <img id="light-6" src="/tau/img/bulb-red.png" width="64em"></a></li>
                 <li><a onclick="toggle(6);" style="border: none; cursor: pointer">
-                    <img id="light-7" src="/tau//bulb-orange.png" width="64em"></a></li>
+                    <img id="light-7" src="/tau/img/bulb-orange.png" width="64em"></a></li>
                 <li><a onclick="toggle(7);" style="border: none; cursor: pointer">
-                    <img id="light-8" src="/tau//bulb-yellow.png" width="64em"></a></li>
+                    <img id="light-8" src="/tau/img/bulb-yellow.png" width="64em"></a></li>
                 <li><a onclick="toggle(8);" style="border: none; cursor: pointer">
-                    <img id="light-9" src="/tau//bulb-green.png" width="64em"></a></li>
+                    <img id="light-9" src="/tau/img/bulb-green.png" width="64em"></a></li>
                 <li><a onclick="toggle(9);" style="border: none; cursor: pointer">
-                    <img id="light-10" src="/tau//bulb-blue.png" width="64em"></a></li>
+                    <img id="light-10" src="/tau/img/bulb-blue.png" width="64em"></a></li>
             </ul>
-            <ul class="actions" id="reload">
+            <ul class="actions withconn noconn" id="reload">
                 <li><a class="button special" onclick="getLights(true)">Reload Status</a></li>
             </ul>
+            <div style="text-align: right;">
+                <a id="conlink" class="loconn" href="/tau-local">Connect</a>
+            </div>
         </section>
 
         <section class="box special features withconn" style="padding:0">
@@ -139,10 +153,31 @@
                     frameborder="0"></iframe>
         </section>
 
+        <!--<section id="cta" style="background: transparent">-->
+        <!--<h2>FAQ</h2>-->
+        <!--<div style="background: #f0f0f0;padding-top: 2em; padding-bottom: 1em">-->
+        <!--<h3 style="margin-left: -40%;"><b>Q:</b></h3>-->
+        <!--<p>Why the stupid name?</p>-->
+        <!--</div>-->
+        <!--<div style="background: #f0f0f0;padding-top: 2em; padding-bottom: 1em; margin-top: 1em">-->
+        <!--<h3 style="margin-left: -40%;"><b>A:</b></h3>-->
+        <!--<p>Shut up.</p>-->
+        <!--</div>-->
+        <!--</section>-->
+
     </section>
 
     <footer id="footer">
-        <a rel="license" style="border: none" href="http://creativecommons.org/licenses/by/4.0/"><img alt="CC BY 4.0" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+        <a rel="license" style="border: none" href="http://creativecommons.org/licenses/by/4.0/">
+            <img alt="CC BY 4.0"
+                 style="border-width:0"
+                 src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+        <br/>
+        <a rel="license" style="border: none" href="https://github.com/onnoeberhard/tau/blob/master/LICENSE">
+            <img alt="MIT License"
+                 style="border-width:0;margin-top: 0.5em"
+                 src="https://img.shields.io/badge/License-MIT-blue.svg"/>
+        </a>
         <br/><br/><br/>
         <ul class="icons">
             <li><a href="https://twitter.com/onnoeberhard" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a>
@@ -158,6 +193,8 @@
             <li>&copy; 2017 &middot; <a href="/">Onno Eberhard</a></li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
+        <img style="border-width:0; margin-top: 3em; margin-bottom: -3em"
+             src="https://img.shields.io/badge/Last Edit-2017--11--03-lightgrey.svg"/>
     </footer>
 
 </div>
@@ -173,6 +210,7 @@
 <script src="/assets/js/js.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyAp4xRdkthGPg5ChtFQlvEcXef5kfyJikA"></script>
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
 <script>
     google.charts.load('current', {'packages': ['corechart', 'table']});
     google.charts.setOnLoadCallback(charts);

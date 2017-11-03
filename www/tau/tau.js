@@ -5,10 +5,14 @@ var ip = null;
 var map;
 var map_ready = false;
 
+var conn = window.location.href.endsWith("local");
+
+const URL = conn ? "http://tau.onnoeberhard.com/index.php?a=" : "tau/local/";
+
 function getLights(notify) {
     $.ajax({
-        url: "https://tau.onnoeberhard.com/index.php?a=get_lights",
-        dataType: 'jsonp',
+        url: URL + "get_lights",
+        dataType: conn ? 'jsonp' : 'json',
         timeout: 2000,
         success: function (res) {
             notify ? jsonLightsDone(res, true) : jsonLights(res);
@@ -28,16 +32,20 @@ function getLights(notify) {
 
 function jsonLights(data) {
     $("#loading").hide();
-    $("#reload").show();
+    var reload = $("#reload");
+    reload.show();
     if (map !== null && (data === null || data.result === null)) {
-        $("#noconn").show();
+        $(".noconn").show();
         $(".withconn").hide();
     } else {
         lights = data.result;
         for (var i = 0; i < lights.length; i++)
             setLight(i, lights[i] === "1");
-        $("#noconn").hide();
+        $(".noconn").hide();
         $(".withconn").show();
+    }
+    if (!conn) {
+        reload.hide();
     }
 }
 
@@ -75,9 +83,9 @@ function setLight(i, state) {
 }
 
 function pushLights() {
-    if (lights !== null)
+    if (conn && lights !== null)
         $.ajax({
-            url: "https://tau.onnoeberhard.com/index.php?a=push_lights&l=" + lights +
+            url: URL + "push_lights&l=" + lights +
             (latlng !== null ? "&p=" + latlng : "") + (ip !== null ? "&ip=" + ip : ""),
             dataType: 'jsonp',
             success: function () {
@@ -102,23 +110,25 @@ function toast(message) {
 }
 
 function getIpLoc() {
-    $.ajax({
-        url: "https://freegeoip.net/json/",
-        dataType: 'jsonp',
-        success: function (json) {
-            var data = JSON.parse(JSON.stringify(json));
-            ip = data["ip"];
-            latlng = data["latitude"] + "," + data["longitude"];
-        },
-        complete: function () {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    function (position) {
-                        latlng = position.coords.latitude + "," + position.coords.longitude;
-                    });
+    if (conn) {
+        $.ajax({
+            url: "https://freegeoip.net/json/",
+            dataType: 'jsonp',
+            success: function (json) {
+                var data = JSON.parse(JSON.stringify(json));
+                ip = data["ip"];
+                latlng = data["latitude"] + "," + data["longitude"];
+            },
+            complete: function () {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        function (position) {
+                            latlng = position.coords.latitude + "," + position.coords.longitude;
+                        });
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 function myMap() {
@@ -133,8 +143,8 @@ function myMap() {
         getLights(false);
     });
     $.ajax({
-        url: "https://tau.onnoeberhard.com/index.php?a=get_map",
-        dataType: 'jsonp',
+        url: URL + "get_map",
+        dataType: conn ? 'jsonp' : 'json',
         success: function (json) {
             for (var i = 0; i < json.length; i++) {
                 var latlng = json[i].latlng.split(',');
@@ -161,8 +171,8 @@ var stats = null;
 
 function getLogStats() {
     $.ajax({
-        url: "https://tau.onnoeberhard.com/index.php?a=get_log_stats",
-        dataType: 'jsonp',
+        url: URL + "get_log_stats",
+        dataType: conn ? 'jsonp' : 'json',
         success: function (json) {
             var logs = json['logs'];
             var log = $("#log");
@@ -189,6 +199,9 @@ function charts() {
             else if (stats[i].type === "city")
                 cities.push([stats[i].name, parseInt(stats[i].count), parseInt(stats[i].value)]);
         }
+        for (i = 0; i < cities.length; i++)
+            while (cities[i][0].substr(0, 1) === " " || cities[i][0].substr(0, 1) === ",")
+                cities[i][0] = cities[i][0].substr(1);
         console.log(cities.length);
         console.log(colors);
         var data = google.visualization.arrayToDataTable(colors);
@@ -217,8 +230,16 @@ function charts() {
     }
 }
 
-$("#noconn").hide();
+$(".noconn").hide();
 $(".withconn").hide();
 $("#reload").hide();
 getLights(false);
-getIpLoc();
+
+if (conn) {
+    var conlink = $("#conlink");
+    conlink.prop("href", "/tau");
+    conlink.html("Unconnect");
+    getIpLoc();
+} else {
+    $("#light_notice").html("You are not connected and can't change the lights.")
+}
