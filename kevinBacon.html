@@ -4,15 +4,10 @@
     <title>{{R}}Ω of Separation</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Introducing a new form of communication: potato-shaped."/>
-    <script src="/assets/js/ie/html5shiv.js"></script>
-    <link rel="stylesheet" href="kb/css/kb.css"/>
-    <link rel="stylesheet" href="kb/css/kb_ie8.css"/>
-    <style>
-        .mdm-logo {
-            display: none;
-        }
-    </style>
+    <meta name="description" content="A small-world experiment on the ePotato network"/>
+    <link rel="stylesheet" href="assets/base.css"/>
+    <link rel="stylesheet" href="kb/kb.css"/>
+    <link rel="shortcut icon" href="assets/favicon.ico"/>
     <script>
         function resizeIframe(obj) {
             obj.style.height = obj.contentWindow.document.body.scrollHeight + 200 + 'px';
@@ -38,12 +33,12 @@
             <a href="#article" style="color: #fff; margin-top: .5em; display:inline-block">What is This?</a></p>
         <form action="/kevinBacon" method="get">
             <label style="color:#fff; max-width: 320px; text-align: left; margin: auto">
-                ePotato-ID A (e.g. yours):
+                ePotato-ID <span style="font-family: 'IM Fell English'; font-size: 1.2rem; font-style: italic">A</span> (e.g. yours):
                 <input type="text" style="background: rgba(0, 0, 0, .3); color: #fff;" name="a" value="{{a}}">
             </label>
             <br>
             <label style="color:#fff; max-width: 320px; text-align: left; margin: auto">
-                ePotato-ID B (<a id="randb" href="kevinBacon?x=randb{% if a %}&a={{a}}{% endif %}" style="color: #fff">Random</a>):
+                ePotato-ID <span style="font-family: 'IM Fell English'; font-size: 1.2rem; font-style: italic">B</span> (<a id="randb" href="kevinBacon?x=randb{% if a %}&a={{a}}{% endif %}" style="color: #fff">Random</a>):
                 <input type="text" style="background: rgba(0, 0, 0, .3); color: #fff;" name="b" value="{{b}}">
             </label>
             <br>
@@ -235,12 +230,8 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<script src="/assets/js/ie/respond.min.js"></script>
-<script src="/assets/js/main.js"></script>
-<script src="/assets/js/js.js"></script>
 <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+<script src="/assets/js.js"></script>
 
 {% if a and b and not x %}
 <script>

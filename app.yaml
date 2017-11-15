@@ -14,6 +14,9 @@ handlers:
    script: main.app
    secure: always
 
+ - url: /main
+   static_dir: main
+
  # APIs
 
  - url: /_ah/api/.*
@@ -27,7 +30,7 @@ handlers:
    secure: always
 
  - url: /kb
-   static_dir: Kevin Bacon/
+   static_dir: Kevin Bacon
 
 
  # ePotato
@@ -37,23 +40,18 @@ handlers:
    upload: ePotato/index.html
    secure: always
 
- - url: /ePotato
-   static_dir: ePotato
-
  - url: /ePotato/Privacy
    static_files: ePotato/privacy.html
    upload: ePotato/privacy.html
-   secure: always
-
- - url: /ePotato/About
-   static_files: ePotato/about.html
-   upload: ePotato/about.html
    secure: always
 
  - url: /ePotato/ios-licenses
    static_files: ePotato/ios-licenses.html
    upload: ePotato/ios-licenses.html
    secure: always
+
+ - url: /ePotato
+   static_dir: ePotato
 
 
  # tau
@@ -63,13 +61,13 @@ handlers:
    upload: tau/index.html
    secure: always
 
- - url: /tau
-   static_dir: tau
-
- - url: /tau-local
+ - url: /tau/local
    static_files: tau/index.html
    upload: tau/index.html
    secure: never
+
+ - url: /tau
+   static_dir: tau
 
 
  # SSL & General
@@ -82,7 +80,7 @@ handlers:
    static_files: _certificates/letsencrypt_challenge2.txt
    upload: _certificates/letsencrypt_challenge2.txt
 
- - url: /assets/
+ - url: /assets
    static_dir: assets
 
  - url: /(.*)

@@ -1,3 +1,4 @@
 # [onnoeberhard.com](https://onnoeberhard.com)
-I used the "Identity" and "Alpha" website templates from http://html5up.net for my website, so I didn't upload all of the
-css files or anything that isn't included in the template / easily downloadable already :)
+The templates i used are "Identity" and "Alpha" from http://html5up.net.
+Thanks so much to the team at html5up for allowing me to create a pretty
+website without knowing jack about webdesign :)

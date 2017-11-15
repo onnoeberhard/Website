@@ -7,7 +7,7 @@ var map_ready = false;
 
 var conn = window.location.href.endsWith("local");
 
-const URL = conn ? "http://tau.onnoeberhard.com/index.php?a=" : "tau/local/";
+const URL = conn ? "http://tau.onnoeberhard.com/index.php?a=" : "/tau/local/";
 
 function getLights(notify) {
     $.ajax({
@@ -56,7 +56,7 @@ function jsonLightsDone(data, success) {
 
 function setLight(i, state) {
     lights = lights.substr(0, i) + (state ? "1" : "0") + lights.substr(i + 1);
-    var src = "tau/img/bulb-";
+    var src = "/tau/img/bulb-";
     switch (i) {
         case 0:
         case 5:

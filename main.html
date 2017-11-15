@@ -26,14 +26,23 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Hello :) This is my personal website with some of my projects"/>
-    <script src="assets/js/html5shiv.js"></script>
-    <link rel="stylesheet" href="assets/css/main_ie9.css"/>
-    <link rel="stylesheet" href="assets/css/main_ie8.css"/>
     <noscript>
-        <link rel="stylesheet" href="assets/css/main_noscript.css"/>
+        <style>
+            body:after {
+                display: none;
+            }
+
+            #main {
+                -moz-transform: none !important;
+                -webkit-transform: none !important;
+                -ms-transform: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        </style>
     </noscript>
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="/main/main.css"/>
+    <link rel="shortcut icon" href="/assets/favicon.ico"/>
 </head>
 <body class="is-loading">
 
@@ -41,7 +50,8 @@
 
     <section id="main">
         <header>
-            <span class="avatar"><img src="assets/images/avatar.jpg" alt=""/></span>
+            <span class="avatar"><img src="http://gravatar.com/avatar/83728630e336a0c04ebcfd7184952e26?s=128"
+                                      alt=""/></span>
             <h1>Onno Eberhard</h1>
             <p>Electrical Engineering Student<br/><i><span
                     style="font-size: 0.75rem">University of Duisburg-Essen</span></i></p>
@@ -70,8 +80,6 @@
     </footer>
 
 </div>
-
-<script src="assets/js/respond.min.js"></script>
 <script>
     if ('addEventListener' in window) {
         window.addEventListener('load', function () {
@@ -80,7 +88,6 @@
         document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
     }
 </script>
-<script src="assets/js/js.js"></script>
-
+<script src="/assets/js.js"></script>
 </body>
 </html>

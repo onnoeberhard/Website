@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|GFS+Didot');
+
+a {
+    color: #4776f4;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4776f4;
+    box-shadow: 0 0 0 2px #4776f4;
+}
+
+input[type="checkbox"]:focus + label:before,
+input[type="radio"]:focus + label:before {
+    border-color: #4776f4;
+    box-shadow: 0 0 0 1px #4776f4;
+}
+
+input[type="submit"].special,
+input[type="reset"].special,
+input[type="button"].special,
+.button.special {
+    background-color: #4776f4;
+}
+
+input[type="submit"].special:hover,
+input[type="reset"].special:hover,
+input[type="button"].special:hover,
+.button.special:hover {
+    background-color: #82a2f7;
+}
+
+input[type="submit"].special:active,
+input[type="reset"].special:active,
+input[type="button"].special:active,
+.button.special:active {
+    background-color: #295ff2;
+}
+
+.dropotron li.active > a, .dropotron li.active > span, .dropotron li:hover > a, .dropotron li:hover > span {
+    background: #4776f4;
+}
+
+.banner {
+    background-image: url(), url("img/lichterkette.jpg");
+}
+
+#cta {
+    background: #0e4bef;
+}
+
+#cta input[type="submit"],
+#cta input[type="reset"],
+#cta input[type="button"],
+#cta .button {
+    color: #4776f4;
+}
+
+.chartw {
+    width: 50%
+}
+
+@media screen and (max-width: 980px) {
+
+    .chartw {
+        width: 100%
+    }
+
+}
+
+#tauboard {
+    width: 50%;
+}
+
+@media screen and (max-width: 480px) {
+    #tauboard {
+        width: 100%;
+        padding: 0;
+    }
+}

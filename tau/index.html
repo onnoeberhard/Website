@@ -18,11 +18,10 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="An internet-controlled chain of lights"/>
-    <script src="/assets/js/ie/html5shiv.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <link rel="stylesheet" href="tau/css/tau_ie8.css"/>
-    <link rel="stylesheet" href="tau/css/tau.css"/>
-    <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="/assets/base.css"/>
+    <link rel="stylesheet" href="/tau/tau.css"/>
+    <link rel="shortcut icon" href="/assets/favicon.ico"/>
 </head>
 <body class="landing">
 <div id="page-wrapper">
@@ -53,9 +52,9 @@
                     and a relay - circuit board I built.</p>
             </header>
             <br/><br/>
-            <div><span id="tauboard" class="image left"><img src="tau/img/tau1.jpg" alt="" style="width: 100%"/><br/>The "Tau-Board"<br/><br/></span>
-                <a class="button" href="tau/img/eplan.png" target="_blank">Schematic Project</a><br/><br/>
-                <a class="button" href="tau/img/Schematic.png" target="_blank">Schematic Tau-Board
+            <div><span id="tauboard" class="image left"><img src="/tau/img/tau1.jpg" alt="" style="width: 100%"/><br/>The "Tau-Board"<br/><br/></span>
+                <a class="button" href="/tau/img/eplan.png" target="_blank">Schematic Project</a><br/><br/>
+                <a class="button" href="/tau/img/Schematic.png" target="_blank">Schematic Tau-Board
                     (old)</a>
                 <br/><br/>
                 <p>As you can see, this is a professionally executed project ;-)<br/>Anyway, because the lights are
@@ -69,7 +68,7 @@
                     <span style="font-size: 0.8rem">It's called a Raspberry <b>Pi</b> (Yes, it's a <i><u>very</u></i> bad pun).</span><br/>
                 </p>
             </div>
-            <div><span class="image fit"><img src="tau/img/kette1.jpg" alt=""/><br/>
+            <div><span class="image fit"><img src="/tau/img/kette1.jpg" alt=""/><br/>
                 The lights in action</span></div>
             <br/>
             <ul class="actions">
@@ -96,11 +95,11 @@
             <h4 class="withconn" id="light_notice">Click the lights to turn them on and off.</h4><br/>
             <ul class="actions no-collapse 50% uniform withconn">
                 <li><a onclick="toggle(0);" style="border: none; cursor: pointer">
-                    <img id="light-1" src="tau/img/bulb-red.png" width="64em"></a></li>
+                    <img id="light-1" src="/tau/img/bulb-red.png" width="64em"></a></li>
                 <li><a onclick="toggle(1);" style="border: none; cursor: pointer">
-                    <img id="light-2" src="tau/img/bulb-orange.png" width="64em"></a></li>
+                    <img id="light-2" src="/tau/img/bulb-orange.png" width="64em"></a></li>
                 <li><a onclick="toggle(2);" style="border: none; cursor: pointer">
-                    <img id="light-3" src="tau/img/bulb-yellow.png" width="64em"></a></li>
+                    <img id="light-3" src="/tau/img/bulb-yellow.png" width="64em"></a></li>
                 <li><a onclick="toggle(3);" style="border: none; cursor: pointer">
                     <img id="light-4" src="/tau/img/bulb-green.png" width="64em"></a></li>
                 <li><a onclick="toggle(4);" style="border: none; cursor: pointer">
@@ -120,7 +119,7 @@
                 <li><a class="button special" onclick="getLights(true)">Reload Status</a></li>
             </ul>
             <div style="text-align: right;">
-                <a id="conlink" href="/tau-local">Connect</a>
+                <a id="conlink" href="/tau/local">Connect</a>
             </div>
         </section>
 
@@ -194,20 +193,16 @@
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
         <img style="border-width:0; margin-top: 3em; margin-bottom: -3em"
-             src="https://img.shields.io/badge/Last Edit-2017--11--03-lightgrey.svg"/>
+             src="https://img.shields.io/badge/Last Edit-2017--11--15-lightgrey.svg"/>
     </footer>
 
 </div>
 <div id="snackbar"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
-<script src="/assets/js/ie/respond.min.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js.js"></script>
 <script src="/tau/tau.js"></script>
-<script src="/assets/js/js.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyAp4xRdkthGPg5ChtFQlvEcXef5kfyJikA"></script>
 <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
