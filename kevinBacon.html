@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{{R}}Ω of Separation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Introducing a new form of communication: potato-shaped."/>
+    <script src="/assets/js/ie/html5shiv.js"></script>
+    <link rel="stylesheet" href="kb/css/kb.css"/>
+    <link rel="stylesheet" href="kb/css/kb_ie8.css"/>
+    <style>
+        .mdm-logo {
+            display: none;
+        }
+    </style>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 200 + 'px';
+        }
+    </script>
+</head>
+<body class="landing">
+<div id="page-wrapper">
+
+    <header id="header" class="alt">
+        <h1><a href="/kevinBacon">Separation</a> by <a href="/" id="uplink">Onno Eberhard</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="https://github.com/onnoeberhard/kevin-bacon" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2 style="font-family: 'IM Fell DW Pica', 'Alegreya'; color: #fff">{{R}}Ω of Separation<a style="cursor: pointer;border:none" onclick="alertify.log('Updated: {{dt}}')">*</a></h2>
+        <p style="font-size: 1rem">A small-world experiment on the <a href="/ePotato" style="color: #fff">ePotato</a>
+            network.<br>
+            <a href="#article" style="color: #fff; margin-top: .5em; display:inline-block">What is This?</a></p>
+        <form action="/kevinBacon" method="get">
+            <label style="color:#fff; max-width: 320px; text-align: left; margin: auto">
+                ePotato-ID A (e.g. yours):
+                <input type="text" style="background: rgba(0, 0, 0, .3); color: #fff;" name="a" value="{{a}}">
+            </label>
+            <br>
+            <label style="color:#fff; max-width: 320px; text-align: left; margin: auto">
+                ePotato-ID B (<a id="randb" href="kevinBacon?x=randb{% if a %}&a={{a}}{% endif %}" style="color: #fff">Random</a>):
+                <input type="text" style="background: rgba(0, 0, 0, .3); color: #fff;" name="b" value="{{b}}">
+            </label>
+            <br>
+            <input type="submit" class="button" value="Analyse!">
+        </form>
+    </section>
+
+    <section id="main" class="container">
+
+        {% if a and b %}
+        <section class="box special features">
+            <h2>{{a}} &harr; {{b}}</h2>
+            <hr>
+            <h4 style="font-size:1.5rem; margin: 1em">Separation</h4>
+            <table style="text-align: left">
+                <thead>
+                <tr>
+                    <th><i>Undirected Separation</i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Loose Separation</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{ls}}°&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>Tight Separation</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{ts}}°&emsp;&emsp;</td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="text-align: left">
+                <thead>
+                <tr>
+                    <th><i>Directed Separation</i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{a}} &rarr; {{b}}</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{abs}}°&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>{{b}} &rarr; {{a}}</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{bas}}°&emsp;&emsp;</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <h4 style="font-size:1.5rem; margin: 1em">Resistance Distance</h4>
+            <table style="text-align: left">
+                <thead>
+                <tr>
+                    <th><i>Undirected Resistance</i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Loose Resistance</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{lr}}Ω&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>Tight Resistance</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{tr}}Ω&emsp;&emsp;</td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="text-align: left">
+                <thead>
+                <tr>
+                    <th><i>Directed Resistance</i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{a}} &rarr; {{b}}</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{abr}}Ω&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>{{b}} &rarr; {{a}}</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{bar}}Ω&emsp;&emsp;</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <div style="text-align: right; margin-right: 1em"><a href="#article">What does this mean?</a></div>
+        </section>
+        {% endif %}
+
+        <section id="article" class="box special features">
+            <h3><a href="https://medium.com/@onnoeberhard/6%CF%89-of-separation-af1b67007423" target="_blank">Read the
+                article</a></h3><br>
+            <script async src="kb/embed.js"></script>
+            <a class="m-story featured" href="https://medium.com/@onnoeberhard/6%CF%89-of-separation-af1b67007423"
+               target="_blank">6Ω of Separation - Onno Eberhard - Medium</a>
+        </section>
+
+        <section class="box special features">
+            <header class="major">
+                <h2>Stats</h2>
+                <p>Whole Network Analysis<a style="cursor: pointer;border:none" onclick="alertify.log('Updated: {{dt}}')">*</a></p>
+            </header>
+            <br>
+            <table style="text-align: left">
+                <tbody>
+                <tr>
+                    <td>Number of nodes (users)</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{n}}&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>Number of subnets (unconnected)</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{subnets}}&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>Number of isolated subnets (population = 1)</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{isolated}}&emsp;&emsp;</td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="text-align: left">
+                <thead>
+                <tr>
+                    <th><i>Biggest Cluster (Subnet)</i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Population</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{population}}&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>Percentage of whole network</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{percentage}}%&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>Average Separation (loose)</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{s}}°&emsp;&emsp;</td>
+                </tr>
+                <tr>
+                    <td>Average Resistance Distance (loose)</td>
+                    <td style="text-align: right; font-family: 'Ubuntu Mono'">{{r}}Ω&emsp;&emsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </section>
+
+    <h3 style="text-align: center">How does it work?</h3>
+    <p style="text-align: center">Read the Notebook</p>
+
+    <iframe class="features" src="kb/Kevin+Bacon.html" scrolling="no" width="100%" onload="resizeIframe(this)"></iframe>
+
+    <footer id="footer">
+        <p style="font-size: .8rem;">Banner Picture from the <a
+                href="https://dhs.stanford.edu/gephi-workshop/twitter-network-gallery/" target="_blank">Twitter Network
+            Gallery</a>,
+            &copy; Stanford
+            University</p>
+        <a rel="license" style="border: none" href="http://creativecommons.org/licenses/by/4.0/">
+            <img alt="CC BY 4.0"
+                 style="border-width:0"
+                 src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+        </a><br/>
+        <a rel="license" style="border: none" href="https://github.com/onnoeberhard/kevin-bacon/blob/master/LICENSE">
+            <img alt="GPL-3.0 License"
+                 style="border-width:0; margin-top: 0.5em"
+                 src="https://img.shields.io/badge/License-GPL 3.0-blue.svg"/>
+        </a>
+        <br/><br/><br/>
+        <ul class="icons">
+            <li><a href="https://twitter.com/onnoeberhard" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a>
+            </li>
+            <li><a href="https://github.com/onnoeberhard" target="_blank" class="icon fa-github"><span class="label">Github</span></a>
+            </li>
+            <li><a href="https://medium.com/@onnoeberhard" target="_blank" class="icon fa-medium"><span class="label">Medium</span></a>
+            </li>
+            <li><a href="mailto:onnoeberhard@gmail.com" class="icon fa-envelope"><span class="label">Mail</span></a>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; 2017 &middot; <a href="/">Onno Eberhard</a></li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+        <img style="border-width:0; margin-top: 3em; margin-bottom: -3em"
+             src="https://img.shields.io/badge/Last Edit-2017--11--03-lightgrey.svg"/>
+    </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/js/skel.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/ie/respond.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/js.js"></script>
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+
+{% if a and b and not x %}
+<script>
+    $(document).ready(function () {
+        if (window.location.hash !== "#main") {
+            $('html, body').animate({
+                scrollTop: $("#main").offset().top
+            }, 800, function () {
+                window.location.hash = "#main";
+            });
+        }
+    });
+</script>
+{% endif %}
+
+</body>
+</html>

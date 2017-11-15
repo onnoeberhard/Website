@@ -1,0 +1,266 @@
+{
+    "logs": [
+        {
+            "id": "8912",
+            "timestamp": "2017-11-01 22:20:56",
+            "value": "0011111101",
+            "color": "blue",
+            "latlng": "51.417994099999994,6.7789418999999995",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8911",
+            "timestamp": "2017-11-01 22:20:52",
+            "value": "0011011101",
+            "color": "orange",
+            "latlng": "51.417994099999994,6.7789418999999995",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8910",
+            "timestamp": "2017-11-01 22:20:51",
+            "value": "0011010101",
+            "color": "orange",
+            "latlng": "51.417994099999994,6.7789418999999995",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8909",
+            "timestamp": "2017-11-01 22:20:47",
+            "value": "0111010101",
+            "color": "orange",
+            "latlng": "51.417994099999994,6.7789418999999995",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8908",
+            "timestamp": "2017-11-01 22:20:43",
+            "value": "0011010101",
+            "color": "yellow",
+            "latlng": "51.417994099999994,6.7789418999999995",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8907",
+            "timestamp": "2017-11-01 22:20:38",
+            "value": "0001010101",
+            "color": "orange",
+            "latlng": "51.417994099999994,6.7789418999999995",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8906",
+            "timestamp": "2017-10-31 20:44:24",
+            "value": "0101010101",
+            "color": "blue",
+            "latlng": "51.4216,6.7553",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8905",
+            "timestamp": "2017-10-31 20:44:18",
+            "value": "0101010100",
+            "color": "yellow",
+            "latlng": "51.4216,6.7553",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8904",
+            "timestamp": "2017-10-31 20:44:17",
+            "value": "0101010000",
+            "color": "yellow",
+            "latlng": "51.4216,6.7553",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8903",
+            "timestamp": "2017-10-31 20:44:14",
+            "value": "0101010100",
+            "color": "",
+            "latlng": "51.4216,6.7553",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8902",
+            "timestamp": "2017-10-31 20:44:14",
+            "value": "0101111100",
+            "color": "blue",
+            "latlng": "51.4216,6.7553",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8901",
+            "timestamp": "2017-10-31 20:44:14",
+            "value": "0101011100",
+            "color": "",
+            "latlng": "51.4216,6.7553",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8900",
+            "timestamp": "2017-10-23 10:48:00",
+            "value": "1101111100",
+            "color": "yellow",
+            "latlng": "51.4216,6.7553",
+            "city": "Duisburg, Nordrhein-Westfalen, Germany"
+        },
+        {
+            "id": "8899",
+            "timestamp": "2017-09-07 21:23:27",
+            "value": "1111111100",
+            "color": "",
+            "latlng": "52.2491,8.0367",
+            "city": "Osnabr\u00fcck, Niedersachsen, Germany"
+        },
+        {
+            "id": "8898",
+            "timestamp": "2017-09-07 21:23:27",
+            "value": "1111111111",
+            "color": "blue",
+            "latlng": "52.2491,8.0367",
+            "city": "Osnabr\u00fcck, Niedersachsen, Germany"
+        },
+        {
+            "id": "8897",
+            "timestamp": "2017-09-07 21:23:27",
+            "value": "1111111110",
+            "color": "",
+            "latlng": "52.2491,8.0367",
+            "city": "Osnabr\u00fcck, Niedersachsen, Germany"
+        },
+        {
+            "id": "8896",
+            "timestamp": "2017-09-07 21:23:25",
+            "value": "1111111000",
+            "color": "orange",
+            "latlng": "52.2491,8.0367",
+            "city": "Osnabr\u00fcck, Niedersachsen, Germany"
+        },
+        {
+            "id": "8895",
+            "timestamp": "2017-09-07 21:23:21",
+            "value": "1111110000",
+            "color": "",
+            "latlng": "52.2491,8.0367",
+            "city": "Osnabr\u00fcck, Niedersachsen, Germany"
+        },
+        {
+            "id": "8894",
+            "timestamp": "2017-09-07 21:23:19",
+            "value": "1111000000",
+            "color": "blue",
+            "latlng": "52.2491,8.0367",
+            "city": "Osnabr\u00fcck, Niedersachsen, Germany"
+        },
+        {
+            "id": "8893",
+            "timestamp": "2017-09-07 21:23:19",
+            "value": "1111100000",
+            "color": "",
+            "latlng": "52.2491,8.0367",
+            "city": "Osnabr\u00fcck, Niedersachsen, Germany"
+        }
+    ],
+    "stats": [
+        {
+            "type": "color",
+            "name": "blue",
+            "value": "1352",
+            "data": null
+        },
+        {
+            "type": "color",
+            "name": "green",
+            "value": "1266",
+            "data": null
+        },
+        {
+            "type": "color",
+            "name": "orange",
+            "value": "1285",
+            "data": null
+        },
+        {
+            "type": "color",
+            "name": "red",
+            "value": "1471",
+            "data": null
+        },
+        {
+            "type": "color",
+            "name": "yellow",
+            "value": "1207",
+            "data": null
+        },
+        {
+            "type": "city",
+            "name": "Worden, Illinois, United States",
+            "value": "512",
+            "data": null,
+            "count": 1
+        },
+        {
+            "type": "city",
+            "name": "S\u00f8nderborg, Region Syddanmark, Denmark",
+            "value": "272",
+            "data": null,
+            "count": 1
+        },
+        {
+            "type": "city",
+            "name": "Quincy, Massachusetts, United States",
+            "value": "264",
+            "data": null,
+            "count": "1"
+        },
+        {
+            "type": "city",
+            "name": "London, England, United Kingdom",
+            "value": "252",
+            "data": null,
+            "count": "13"
+        },
+        {
+            "type": "city",
+            "name": "Toronto, Ontario, Canada",
+            "value": "211",
+            "data": null,
+            "count": "4"
+        },
+        {
+            "type": "city",
+            "name": "Barcelona, Catalunya, Spain",
+            "value": "145",
+            "data": null,
+            "count": "1"
+        },
+        {
+            "type": "city",
+            "name": "Paris, \u00cele-de-France, France",
+            "value": "144",
+            "data": null,
+            "count": "4"
+        },
+        {
+            "type": "city",
+            "name": ", Thessalia Sterea Ellada, Greece",
+            "value": "87",
+            "data": null,
+            "count": "1"
+        },
+        {
+            "type": "city",
+            "name": "La Porte, Indiana, United States",
+            "value": "82",
+            "data": null,
+            "count": 1
+        },
+        {
+            "type": "city",
+            "name": "Four Oaks, North Carolina, United States",
+            "value": "79",
+            "data": null,
+            "count": "1"
+        }
+    ]
+}

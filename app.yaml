@@ -1,0 +1,96 @@
+application: onno-eberhard
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+# Maintenance Page
+# - url: /(.*)
+#   static_files: maintenance.html
+#   upload: maintenance.html
+
+ - url: /
+   script: main.app
+   secure: always
+
+ # APIs
+
+ - url: /_ah/api/.*
+   script: endpoint.api
+
+
+ # Kevin Bacon
+
+ - url: /kevinBacon
+   script: kevinBacon.app
+   secure: always
+
+ - url: /kb
+   static_dir: Kevin Bacon/
+
+
+ # ePotato
+
+ - url: /(ePotato|epotato)
+   static_files: ePotato/index.html
+   upload: ePotato/index.html
+   secure: always
+
+ - url: /ePotato
+   static_dir: ePotato
+
+ - url: /ePotato/Privacy
+   static_files: ePotato/privacy.html
+   upload: ePotato/privacy.html
+   secure: always
+
+ - url: /ePotato/About
+   static_files: ePotato/about.html
+   upload: ePotato/about.html
+   secure: always
+
+ - url: /ePotato/ios-licenses
+   static_files: ePotato/ios-licenses.html
+   upload: ePotato/ios-licenses.html
+   secure: always
+
+
+ # tau
+
+ - url: /tau
+   static_files: tau/index.html
+   upload: tau/index.html
+   secure: always
+
+ - url: /tau
+   static_dir: tau
+
+ - url: /tau-local
+   static_files: tau/index.html
+   upload: tau/index.html
+   secure: never
+
+
+ # SSL & General
+
+ - url: /.well-known/acme-challenge/iWVj_exSO2QagTeJhDfipPH_H1mw9HQoSYSMwESvxYs
+   static_files: _certificates/letsencrypt_challenge1.txt
+   upload: _certificates/letsencrypt_challenge1.txt
+
+ - url: /.well-known/acme-challenge/u-uO-rSf9U7IIynCcM1Utk8YDyNoWnfsnfBzcKZffD8
+   static_files: _certificates/letsencrypt_challenge2.txt
+   upload: _certificates/letsencrypt_challenge2.txt
+
+ - url: /assets/
+   static_dir: assets
+
+ - url: /(.*)
+   static_files: 404.html
+   upload: 404.html
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: "2.6"

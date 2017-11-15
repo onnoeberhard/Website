@@ -81,7 +81,7 @@
 
         <section id="controls" class="box special features">
             <h2 id="loading"><br/>Loading...</h2>
-            <h2 class="noconn loconn">No Connection</h2>
+            <h2 class="noconn">No Connection</h2>
             <a class="noconn button"
                onclick="alertify.alert('There is no connection to the Raspberry Pi, because either I have turned ' +
                 'it off, or you are on an IPv4 connection, wich sadly is not supported anymore, ' +
@@ -94,7 +94,7 @@
             </a><br class="noconn"/>
             <h2 class="withconn">Light Controls</h2>
             <h4 class="withconn" id="light_notice">Click the lights to turn them on and off.</h4><br/>
-            <ul class="actions no-collapse 50% uniform withconn loconn">
+            <ul class="actions no-collapse 50% uniform withconn">
                 <li><a onclick="toggle(0);" style="border: none; cursor: pointer">
                     <img id="light-1" src="tau/img/bulb-red.png" width="64em"></a></li>
                 <li><a onclick="toggle(1);" style="border: none; cursor: pointer">
@@ -120,7 +120,7 @@
                 <li><a class="button special" onclick="getLights(true)">Reload Status</a></li>
             </ul>
             <div style="text-align: right;">
-                <a id="conlink" class="loconn" href="/tau-local">Connect</a>
+                <a id="conlink" href="/tau-local">Connect</a>
             </div>
         </section>
 
@@ -190,7 +190,7 @@
             </li>
         </ul>
         <ul class="copyright">
-            <li>&copy; 2017 &middot; <a href="/">Onno Eberhard</a></li>
+            <li>&copy; 2017-06-28 &middot; <a href="/">Onno Eberhard</a></li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
         <img style="border-width:0; margin-top: 3em; margin-bottom: -3em"
