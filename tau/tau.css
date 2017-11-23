@@ -46,6 +46,28 @@ input[type="button"].special:active,
     background: #4776f4;
 }
 
+
+.banner input[type="submit"].special,
+.banner input[type="reset"].special,
+.banner input[type="button"].special,
+.banner .button.special {
+    background-color: #fff;
+}
+
+.banner input[type="submit"].special:hover,
+.banner input[type="reset"].special:hover,
+.banner input[type="button"].special:hover,
+.banner .button.special:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.banner input[type="submit"].special:active,
+.banner input[type="reset"].special:active,
+.banner input[type="button"].special:active,
+.banner .button.special:active {
+    background-color: rgba(255, 255, 255, .8);
+}
+
 .banner {
     background-image: url(), url("img/lichterkette.jpg");
 }

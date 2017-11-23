@@ -11,6 +11,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
         a = self.request.get('a')
@@ -22,7 +23,10 @@ class MainPage(webapp2.RequestHandler):
             users = data['users']
             uids = data['uids']
         if x == "randb" or not (a or b):
-            self.redirect("/kevinBacon?x=r&" + urllib.urlencode({'b': random.choice(users.keys())}) + ("&a=" + a if a else ""))
+            self.redirect(
+                "/kevinBacon?x=r&" + urllib.urlencode({'b': random.choice(users.keys())}) + ("&a=" + a if a else ""))
+        if a not in users: a = ""
+        if b not in users: b = ""
         if a and b:
             aidx = uids.index(users[a])
             bidx = uids.index(users[b])
@@ -34,7 +38,6 @@ class MainPage(webapp2.RequestHandler):
             tr = "%.6g" % data['R_tight'][aidx][bidx]
             abr = "%.6g" % data['R'][aidx][bidx]
             bar = "%.6g" % data['R'][bidx][aidx]
-            print(data['subnets'])
         template_values = {
             'R': "%.4g" % data['r'],
             'dt': datetime.datetime.strptime(data['dt'], '%Y%m%d%H%M%S').date().isoformat(),

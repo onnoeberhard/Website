@@ -238,7 +238,7 @@ getLights(false);
 if (conn) {
     var conlink = $("#conlink");
     conlink.prop("href", "/tau");
-    conlink.html("Unconnect");
+    conlink.html("Disconnect");
     getIpLoc();
 } else {
     $("#light_notice").html("You are not connected and can't change the lights.")

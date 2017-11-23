@@ -27,18 +27,21 @@
     </header>
 
     <section class="banner">
-        <h2 style="font-family: 'IM Fell DW Pica', 'Alegreya'; color: #fff">{{R}}Ω of Separation<a style="cursor: pointer;border:none" onclick="alertify.log('Updated: {{dt}}')">*</a></h2>
+        <h2 style="font-family: 'IM Fell DW Pica', 'Alegreya'; color: #fff">{{R}}Ω of Separation<a
+                style="cursor: pointer;border:none" onclick="alertify.log('Updated: {{dt}}')">*</a></h2>
         <p style="font-size: 1rem">A small-world experiment on the <a href="/ePotato" style="color: #fff">ePotato</a>
             network.<br>
             <a href="#article" style="color: #fff; margin-top: .5em; display:inline-block">What is This?</a></p>
         <form action="/kevinBacon" method="get">
             <label style="color:#fff; max-width: 320px; text-align: left; margin: auto">
-                ePotato-ID <span style="font-family: 'IM Fell English'; font-size: 1.2rem; font-style: italic">A</span> (e.g. yours):
+                ePotato-ID <span style="font-family: 'IM Fell English'; font-size: 1.2rem; font-style: italic">A</span>
+                (e.g. yours):
                 <input type="text" style="background: rgba(0, 0, 0, .3); color: #fff;" name="a" value="{{a}}">
             </label>
             <br>
             <label style="color:#fff; max-width: 320px; text-align: left; margin: auto">
-                ePotato-ID <span style="font-family: 'IM Fell English'; font-size: 1.2rem; font-style: italic">B</span> (<a id="randb" href="kevinBacon?x=randb{% if a %}&a={{a}}{% endif %}" style="color: #fff">Random</a>):
+                ePotato-ID <span style="font-family: 'IM Fell English'; font-size: 1.2rem; font-style: italic">B</span>
+                (<a id="randb" href="kevinBacon?x=randb{% if a %}&a={{a}}{% endif %}" style="color: #fff">Random</a>):
                 <input type="text" style="background: rgba(0, 0, 0, .3); color: #fff;" name="b" value="{{b}}">
             </label>
             <br>
@@ -139,7 +142,8 @@
         <section class="box special features">
             <header class="major">
                 <h2>Stats</h2>
-                <p>Whole Network Analysis<a style="cursor: pointer;border:none" onclick="alertify.log('Updated: {{dt}}')">*</a></p>
+                <p>Whole Network Analysis<a style="cursor: pointer;border:none"
+                                            onclick="alertify.log('Updated: {{dt}}')">*</a></p>
             </header>
             <br>
             <table style="text-align: left">
@@ -183,12 +187,19 @@
                 </tr>
                 </tbody>
             </table>
+
+            <a class="button special" href="/ePotato">Get ePotato!</a>
+            <p style="margin-top: .5em">Become member #{{n + 1}}</p>
         </section>
 
     </section>
 
     <h3 style="text-align: center">How does it work?</h3>
-    <p style="text-align: center">Read the Notebook</p>
+    <p style="text-align: center">
+        Read the Notebook<br>
+        <a href="https://nbviewer.jupyter.org/gist/onnoeberhard/a55697f0bb17adf10860b89f834eb34c" target="_blank">View
+            in nbviewer <span class="icon fa-external-link"></span></a>
+    </p>
 
     <iframe class="features" src="kb/Kevin+Bacon.html" scrolling="no" width="100%" onload="resizeIframe(this)"></iframe>
 

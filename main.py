@@ -10,7 +10,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 class MainPage(webapp2.RequestHandler):
     def get(self):
         template_values = {
-            'kb': 6,    # I could unpickle `kevinBacon.pickle` to get the actual number, but that file is big.
+            'kb': 6,    # I could unpickle `kevinBacon.pickle` to get the actual number, but performance.
         }
         template = JINJA_ENVIRONMENT.get_template('main.html')
         self.response.write(template.render(template_values))
