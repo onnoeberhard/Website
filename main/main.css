@@ -257,6 +257,10 @@ hr {
     margin: 3em 0;
 }
 
+hr.special {
+    border-bottom: dashed 1px #c8cccf;
+}
+
 /* Form */
 
 form {
