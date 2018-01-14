@@ -5,6 +5,7 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+
 # Maintenance Page
 # - url: /(.*)
 #   static_files: maintenance.html
@@ -51,7 +52,7 @@ handlers:
    upload: ePotato/ios-licenses.html
    secure: always
 
- - url: /(ePotato|epotato)
+ - url: /ePotato
    static_dir: ePotato
 
 
@@ -84,11 +85,11 @@ handlers:
 
  # SSL & General
 
- - url: /.well-known/acme-challenge/iWVj_exSO2QagTeJhDfipPH_H1mw9HQoSYSMwESvxYs
+ - url: /.well-known/acme-challenge/FjJmBoWxCfWeaOynL4yxKoldg0bv1eoJOED8GpYnG4c
    static_files: _certificates/letsencrypt_challenge1.txt
    upload: _certificates/letsencrypt_challenge1.txt
 
- - url: /.well-known/acme-challenge/u-uO-rSf9U7IIynCcM1Utk8YDyNoWnfsnfBzcKZffD8
+ - url: /.well-known/acme-challenge/h13rYINHPiAlzFwW2_6z3nJfBioga9QUDLtoC2tlxwQ
    static_files: _certificates/letsencrypt_challenge2.txt
    upload: _certificates/letsencrypt_challenge2.txt
 
@@ -99,8 +100,11 @@ handlers:
    static_files: 404.html
    upload: 404.html
 
+
 libraries:
-- name: webapp2
-  version: "2.5.2"
-- name: jinja2
-  version: "2.6"
+
+ - name: webapp2
+   version: "2.5.2"
+
+ - name: jinja2
+   version: "2.6"
