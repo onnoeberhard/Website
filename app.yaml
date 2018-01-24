@@ -96,6 +96,10 @@ handlers:
  - url: /assets
    static_dir: assets
 
+ - url: /sitemap.txt
+   static_files: sitemap.txtx^
+   upload: sitemap.txt
+
  - url: /(.*)
    static_files: 404.html
    upload: 404.html
