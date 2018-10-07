@@ -574,6 +574,11 @@ ul.icons li a.fa-github:hover:before {
     /*text-shadow: 1.25px 0px 0px #0ab246, -1.25px 0px 0px #0ab246, 0px 1.25px 0px #0ab246, 0px -1.25px 0px #0ab246;*/
 }
 
+ul.icons li a.fa-linkedin-square:hover:before {
+    color: #0077B5;
+    /*text-shadow: 1.25px 0px 0px #0ab246, -1.25px 0px 0px #0ab246, 0px 1.25px 0px #0ab246, 0px -1.25px 0px #0ab246;*/
+}
+
 ul.icons li a.fa-medium:hover:before {
     color: #00ab6c;
     /*text-shadow: 1.25px 0px 0px #0ab246, -1.25px 0px 0px #0ab246, 0px 1.25px 0px #0ab246, 0px -1.25px 0px #0ab246;*/
@@ -614,6 +619,10 @@ ul.icons li a.fa-twitter:hover {
 
 ul.icons li a.fa-github:hover {
     border-color: #6e5494;
+}
+
+ul.icons li a.fa-linkedin-square:hover {
+    border-color: #0077B5;
 }
 
 ul.icons li a.fa-medium:hover {

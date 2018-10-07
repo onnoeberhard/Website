@@ -1,3 +1,5 @@
 /_*
 /.idea
 stuff.html
+.DS_Store
+*.pyc
