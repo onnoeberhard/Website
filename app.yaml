@@ -82,6 +82,15 @@ handlers:
  - url: /archive
    static_dir: archive
 
+ # special
+
+ - url: /certs
+   static_files: special/certs.html
+   upload: special/certs.html
+   secure: always
+
+ - url: /special
+   static_dir: special
 
  # SSL & General
 
