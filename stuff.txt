@@ -1,0 +1,4 @@
+Befehle:
+--------
+Deployen: "gcloud app deploy"
+Lokal testen: "dev_appserver.py app.yaml"

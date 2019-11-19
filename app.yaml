@@ -1,5 +1,5 @@
-application: onno-eberhard
-version: 1
+# application: onno-eberhard
+# version: 1
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -94,11 +94,11 @@ handlers:
 
  # SSL & General
 
- - url: /.well-known/acme-challenge/AQH2D8CY5EA_pbOgpHcRaGrL8uYXik4WScpSSYHTfHY
+ - url: /.well-known/acme-challenge/smj4XR5HBDLJJx1mT1aMgog2riDH2EjFfB6T9VW9Z2o
    static_files: _certificates/letsencrypt_challenge1.txt
    upload: _certificates/letsencrypt_challenge1.txt
 
- - url: /.well-known/acme-challenge/3iTzfTBtRFdzieSGs07i7fEgsequGoAdNoit8I_znRk
+ - url: /.well-known/acme-challenge/NDDsrC23YrYTMicfwlOEBuabpkJOJOfOmCci6fUoBnQ
    static_files: _certificates/letsencrypt_challenge2.txt
    upload: _certificates/letsencrypt_challenge2.txt
 
