@@ -94,11 +94,11 @@ handlers:
 
  # SSL & General
 
- - url: /.well-known/acme-challenge/smj4XR5HBDLJJx1mT1aMgog2riDH2EjFfB6T9VW9Z2o
+ - url: /.well-known/acme-challenge/3--lWxXBNRrfZ0SelSyqWe2CgSMJBW9KFt1_CA-RLu0
    static_files: _certificates/letsencrypt_challenge1.txt
    upload: _certificates/letsencrypt_challenge1.txt
 
- - url: /.well-known/acme-challenge/NDDsrC23YrYTMicfwlOEBuabpkJOJOfOmCci6fUoBnQ
+ - url: /.well-known/acme-challenge/hKKHtWQIU2nqMsdLy3chcjGKgRV5Dn8rkT_GlgyvN0Y
    static_files: _certificates/letsencrypt_challenge2.txt
    upload: _certificates/letsencrypt_challenge2.txt
 
