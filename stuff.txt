@@ -1,4 +1,9 @@
 Befehle:
 --------
-Deployen: "gcloud app deploy"
-Lokal testen: "dev_appserver.py app.yaml"
+conda activate python2
+
+# Deployen
+gcloud app deploy
+
+Lokal testen
+dev_appserver.py app.yaml

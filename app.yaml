@@ -11,113 +11,118 @@ handlers:
 #   static_files: maintenance.html
 #   upload: maintenance.html
 
- - url: /
-   script: main.app
-   secure: always
+  - url: /
+    script: main.app
+    secure: always
 
- - url: /main
-   static_dir: main
+  - url: /main
+    static_dir: main
 
 
  # APIs
 
- - url: /_ah/api/.*
-   script: endpoint.api
+  - url: /_ah/api/.*
+    script: endpoint.api
 
 
  # Kevin Bacon
 
- - url: /(kevinBacon|kevinbacon)
-   script: kevinBacon.app
-   secure: always
+  - url: /(kevinBacon|kevinbacon)
+    script: kevinBacon.app
+    secure: always
 
- - url: /kb
-   static_dir: Kevin Bacon
+  - url: /kb
+    static_dir: Kevin Bacon
 
 
  # ePotato
 
- - url: /(ePotato|epotato)
-   static_files: ePotato/index.html
-   upload: ePotato/index.html
-   secure: always
+  - url: /(ePotato|epotato)
+    static_files: ePotato/index.html
+    upload: ePotato/index.html
+    secure: always
 
- - url: /(ePotato|epotato)/(Privacy|privacy)
-   static_files: ePotato/privacy.html
-   upload: ePotato/privacy.html
-   secure: always
+  - url: /(ePotato|epotato)/(Privacy|privacy)
+    static_files: ePotato/privacy.html
+    upload: ePotato/privacy.html
+    secure: always
 
- - url: /(ePotato|epotato)/ios-licenses
-   static_files: ePotato/ios-licenses.html
-   upload: ePotato/ios-licenses.html
-   secure: always
+  - url: /(ePotato|epotato)/ios-licenses
+    static_files: ePotato/ios-licenses.html
+    upload: ePotato/ios-licenses.html
+    secure: always
 
- - url: /ePotato
-   static_dir: ePotato
+  - url: /ePotato
+    static_dir: ePotato
 
 
  # tau
 
- - url: /tau
-   static_files: tau/index.html
-   upload: tau/index.html
-   secure: always
+  - url: /tau
+    static_files: tau/index.html
+    upload: tau/index.html
+    secure: always
 
- - url: /tau/local
-   static_files: tau/index.html
-   upload: tau/index.html
-   secure: never
+  - url: /tau/local
+    static_files: tau/index.html
+    upload: tau/index.html
+    secure: never
 
- - url: /tau
-   static_dir: tau
+  - url: /tau
+    static_dir: tau
 
 
  # archive
 
- - url: /archive
-   static_files: archive/index.html
-   upload: archive/index.html
-   secure: always
+  - url: /archive
+    static_files: archive/index.html
+    upload: archive/index.html
+    secure: always
 
- - url: /archive
-   static_dir: archive
+  - url: /archive
+    static_dir: archive
 
  # special
 
- - url: /certs
-   static_files: special/certs.html
-   upload: special/certs.html
-   secure: always
+  - url: /certs
+    static_files: special/certs.html
+    upload: special/certs.html
+    secure: always
 
- - url: /special
-   static_dir: special
+  - url: /special
+    static_dir: special
+
+  - url: /deepspeech
+    static_files: special/deepspeech.html
+    upload: special/deepspeech.html
+    secure: always
 
  # SSL & General
 
- - url: /.well-known/acme-challenge/PP8TkdH5Ege1YW0jyYDpaiN9poClY1R4Ay38ucXEv2Y
-   static_files: _certificates/letsencrypt_challenge1.txt
-   upload: _certificates/letsencrypt_challenge1.txt
+  - url: /.well-known/acme-challenge/Wo3_NuLIuF-AwP1T2CYnMOA8rwLu7KvJUROrzo2SlxU
+    static_files: _certificates/letsencrypt_challenge1.txt
+    upload: _certificates/letsencrypt_challenge1.txt
 
- - url: /.well-known/acme-challenge/9AFq0Oe4TWZqPYS3I_7W1e3cb0WChG9hZokAFDYeqmI
-   static_files: _certificates/letsencrypt_challenge2.txt
-   upload: _certificates/letsencrypt_challenge2.txt
+  - url: /.well-known/acme-challenge/36dKqExVSw6_Hk28aQs6NiQeuTdDYOKQaXNVaESmwYs
+    static_files: _certificates/letsencrypt_challenge2.txt
+    upload: _certificates/letsencrypt_challenge2.txt
 
- - url: /assets
-   static_dir: assets
+  - url: /assets
+    static_dir: assets
 
- - url: /sitemap.txt
-   static_files: sitemap.txt
-   upload: sitemap.txt
+  - url: /sitemap.txt
+    static_files: sitemap.txt
+    upload: sitemap.txt
 
- - url: /(.*)
-   static_files: 404.html
-   upload: 404.html
+  - url: /(.*)
+    static_files: 404.html
+    upload: 404.html
 
 
 libraries:
+ 
+  - name: webapp2
+    version: "2.5.2"
 
- - name: webapp2
-   version: "2.5.2"
-
- - name: jinja2
-   version: "2.6"
+  - name: jinja2
+    version: "2.6"
