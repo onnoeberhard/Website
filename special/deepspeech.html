@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>DeepSpeech - Onno Eberhard</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <noscript>
+        <style>
+            body:after {
+                display: none;
+            }
+
+            #main {
+                -moz-transform: none !important;
+                -webkit-transform: none !important;
+                -ms-transform: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+    <link rel="stylesheet" href="/main/main.css"/>
+    <link rel="shortcut icon" href="/assets/favicon.ico"/>
+</head>
+<body class="is-loading">
+
+<div id="wrapper">
+
+    <section id="main">
+        <header>
+            <h2><a href="/">Onno Eberhard</a></h2>
+            <h1>Deep Speech</h1>
+        </header>
+        <hr/>
+        <h2><i style="text-transform: none">Effects of Layer Freezing when Transferring<br> DeepSpeech to New Languages</i></h2>
+        <h2><a href="https://arxiv.org/abs/2102.04097">Paper</a></h2>
+        <p style="text-transform: none; margin-top: -.8em; letter-spacing: .05em; line-height: normal;">
+            ArXiv page
+        </p>
+        <h2><a href="https://github.com/onnoeberhard/deepspeech-paper">Paper Repository</a></h2>
+        <p style="text-transform: none; margin-top: -.8em; letter-spacing: .05em; line-height: normal;">
+            Training script, Training and testing logs, Plots from paper, LaTeX
+        </p>
+        <h2><a href="https://github.com/onnoeberhard/deepspeech-transfer/branches">DeepSpeech Repository</a></h2>
+        <p style="text-transform: none; margin-top: -.8em; letter-spacing: .05em; line-height: normal;">
+            Forked from mozilla/deepspeech.<br>The important branches are <i>transfer-1</i>, <i>transfer-2</i>, <i>transfer</i> and <i>transfer-4</i>.
+        </p>
+        <!-- <h2><a href="https://storage.googleapis.com/onno-eberhard.appspot.com/checkpoint-3layer.tar.gz">Model Checkpoint</a></h2>
+        <p style="text-transform: none; margin-top: -.8em; letter-spacing: .05em; line-height: normal;">
+            TensorFlow checkpoint from our best model (3 frozen layers).
+        </p> -->
+        <!--sub-categories?-->
+        <!--<br>-->
+        <!--<h3>2017</h3>-->
+        <!--<h2><a href="https://github.com/onnoeberhard/tic-tac-go">tic-tac-go</a></h2>-->
+        <!--<hr/>-->
+        <!--<footer style="margin-top:2em; margin-bottom:-2em">-->
+            <!--<ul class="icons">-->
+                <!--<li><a href="https://twitter.com/onnoeberhard" target="_blank" class="fa-twitter">Twitter</a></li>-->
+                <!--<li><a href="https://github.com/onnoeberhard" target="_blank" class="fa-github">Github</a></li>-->
+                <!--<li><a href="https://www.linkedin.com/in/onnoeberhard" target="_blank" class="fa-linkedin-square">LinkedIn</a></li>-->
+                <!--<li id="mailicon"><a href="mailto:onnoeberhard@gmail.com" class="fa-envelope">Mail</a></li>-->
+            <!--</ul>-->
+        <!--</footer>-->
+    </section>
+
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; 2020, Onno Eberhard</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Buntification -->
+<!-- <div style="position: fixed; top: 0; left: 0; width: 200px; height: 100%; pointer-events:none; background: url(https://www.tomscott.com/buntify/bunting_l.png) top left repeat-y;"></div>
+<div style="position: fixed; top: 0; right: 0; width: 200px; height: 100%; pointer-events:none; background: url(https://www.tomscott.com/buntify/bunting_r.png) top right repeat-y;"></div>
+<div style="position: fixed; bottom: 0; left: 0; width: 100%; height: 200px; pointer-events:none; background: url(https://www.tomscott.com/buntify/bunting_d.png) bottom center no-repeat;"></div> -->
+
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function () {
+            document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+        });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/js.js"></script>
+</body>
+</html>
